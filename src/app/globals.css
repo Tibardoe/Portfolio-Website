@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,13 +11,23 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: radial-gradient(circle, #ffffff 0%, #d7d7d7 100%);
+    --foreground: #000000;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", serif;
+}
+
+.rightt {
+  border-left: 100px solid #d7d7d7;
+  border-bottom: 100dvh solid black;
+  width: calc(50% + 100px);
+}
+
+.leftt {
+  width: calc(50% - 50px);
 }

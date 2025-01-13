@@ -1,10 +1,12 @@
-import HeaderBox from "@/component/HeaderBox";
+import HeaderBox from "@/components/HeaderBox";
 import Image from "next/image";
 
 export default function Skills() {
   return (
     <section className="flex flex-col space-y-14 w-3/4 m-auto items-center">
-      <HeaderBox>Skills</HeaderBox>
+      <HeaderBox>
+        <h1>SKILLS</h1>
+      </HeaderBox>
       <div className="container grid grid-cols-4 space-y-5">
         <h2 className="font-bold text-xl col-span-4">USING NOW:</h2>
         <div className="flex flex-col space-y-3 mt-5 items-center">

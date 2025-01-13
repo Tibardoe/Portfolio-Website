@@ -1,13 +1,14 @@
-import NavBar from "@/component/NavBar";
+import NavBar from "@/components/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 import About from "./about/page";
 import Contact from "./contact/page";
+import Project from "./projects/page";
 import Skills from "./skills/page";
 
 export default function Home() {
   return (
-    <main className="space-y-10">
+    <main className="space-y-10 mb-10">
       <section className="flex h-dvh relative">
         {/* Left card */}
         <div className="bg-cream h-full flex justify-start absolute leftt">
@@ -23,7 +24,7 @@ export default function Home() {
 
             <div className="flex space-x-3">
               <Link
-                className="bg-buttonBg p-2 shadow-2xl rounded-full-2"
+                className="bg-buttonBg p-2 drop-shadow-lg rounded-full-2 relative hover:top-2 duration-300"
                 href="https://x.com/Big_Tibardoe"
               >
                 <Image
@@ -35,7 +36,7 @@ export default function Home() {
               </Link>
 
               <Link
-                className="bg-buttonBg p-2 shadow-2xl rounded-full-2"
+                className="bg-buttonBg p-2 drop-shadow-lg rounded-full-2 relative hover:top-2 transition duration-300"
                 href="https://github.com/dashboard"
               >
                 <Image
@@ -47,7 +48,7 @@ export default function Home() {
               </Link>
 
               <Link
-                className="bg-buttonBg p-2 drop-shadow-2xl rounded-full-2"
+                className="bg-buttonBg p-2 drop-shadow-lg rounded-full-2 relative hover:top-2 transition duration-300"
                 href="https://www.linkedin.com/in/tibardoe-benjamin"
               >
                 <Image
@@ -71,6 +72,8 @@ export default function Home() {
       <About />
 
       <Skills />
+
+      <Project />
 
       <Contact />
     </main>

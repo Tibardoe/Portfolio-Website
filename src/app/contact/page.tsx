@@ -1,7 +1,7 @@
 "use client";
 
-import HeaderBox from "@/component/HeaderBox";
-import Input from "@/component/Input";
+import HeaderBox from "@/components/HeaderBox";
+import Input from "@/components/Input";
 import { useState } from "react";
 
 export default function Contact() {
@@ -24,7 +24,9 @@ export default function Contact() {
 
   return (
     <section className="flex flex-col items-center w-full p-5 space-y-10">
-      <HeaderBox>Contact Me</HeaderBox>
+      <HeaderBox>
+        <h1> CONTACT ME</h1>
+      </HeaderBox>
       <p className="w-3/5">
         I’d love to hear from you! Whether you have questions, want to discuss
         potential collaborations, or just want to connect, feel free to reach

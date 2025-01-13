@@ -1,11 +1,11 @@
-import HeaderBox from "@/component/HeaderBox";
-import NavBar from "@/component/NavBar";
+import HeaderBox from "@/components/HeaderBox";
+import NavBar from "@/components/NavBar";
 
 export default function About() {
   return (
     <section className="flex flex-col items-center p-5 w-full space-y-10">
       <HeaderBox>
-        <h1>About Me</h1>
+        <h1>ABOUT ME</h1>
       </HeaderBox>
 
       <div className="container w-3/5 space-y-5 text-center">

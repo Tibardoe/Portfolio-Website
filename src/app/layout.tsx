@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main>{children}</main>
+        <main className="tracking-wide">{children}</main>
         <Footer />
       </body>
     </html>

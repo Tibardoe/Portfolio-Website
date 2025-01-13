@@ -2,24 +2,48 @@ import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <nav className="text-white font-bold mt-28 p-4 flex align-middle">
-      <div className="p-2 space-x-5">
-        <Link className="hover:text-xl duration-300" href="/about">
-          About Me
-        </Link>
-        <Link className="hover:text-xl duration-300" href="/projects">
-          Projects
-        </Link>
-        <Link className="hover:text-xl duration-300" href="/skills">
-          Skills
-        </Link>
-        <Link
-          className="bg-white p-2 rounded-full text-black hover:text-white  hover:bg-transparent hover:border transition duration-300"
-          href="/contact"
-        >
-          Contact Me
-        </Link>
-      </div>
-    </nav>
+    <>
+      <nav className="text-white font-bold mt-28 p-4 align-middle hidden md:flex">
+        <div className="p-2 gap-5 flex flex-wrap items-center">
+          <Link className="hover:text-xl duration-300" href="/about">
+            About Me
+          </Link>
+          <Link className="hover:text-xl duration-300" href="/projects">
+            Projects
+          </Link>
+          <Link className="hover:text-xl duration-300" href="/skills">
+            Skills
+          </Link>
+          <Link
+            className="bg-white p-2 rounded-full text-black hover:text-white  hover:bg-transparent hover:border transition duration-300"
+            href="/contact"
+          >
+            Contact Me
+          </Link>
+        </div>
+      </nav>
+
+      {/* On smaller screens */}
+
+      <nav className="text-white font-bold p-4 border-t-2 border-t-white flex-wrap justify-center flex md:hidden">
+        <div className="p-2 space-y-5 flex flex-col items-center">
+          <Link className="hover:text-xl duration-300" href="/about">
+            About Me
+          </Link>
+          <Link className="hover:text-xl duration-300" href="/projects">
+            Projects
+          </Link>
+          <Link className="hover:text-xl duration-300" href="/skills">
+            Skills
+          </Link>
+          <Link
+            className="bg-white p-2 rounded-full text-black hover:text-white  hover:bg-transparent hover:border transition duration-300"
+            href="/contact"
+          >
+            Contact Me
+          </Link>
+        </div>
+      </nav>
+    </>
   );
 }

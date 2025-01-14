@@ -8,33 +8,33 @@ export default function Footer() {
       <div className="bg-transparent flex gap-5">
         <Link href="https://mail.google.com/mail/u/0/#inbox?compose=new">
           <Image
-            src="assets/images/mail.svg"
+            src="assets/images/footerImg/mail.svg"
             alt="Gmail"
             width={30}
             height={30}
             className="text-white"
           />
         </Link>
-        <Link href="https://mail.google.com/mail/u/0/#inbox?compose=new">
+        <Link href="https://www.linkedin.com/in/tibardoe-benjamin">
           <Image
-            src="assets/images/linkedin.svg"
+            src="assets/images/footerImg/linkedin.svg"
+            alt="LinkedIn"
+            width={30}
+            height={30}
+          />
+        </Link>
+        <Link href="https://github.com/dashboard">
+          <Image
+            src="assets/images/footerImg/github.svg"
             alt="GitHub"
             width={30}
             height={30}
           />
         </Link>
-        <Link href="https://mail.google.com/mail/u/0/#inbox?compose=new">
+        <Link href="https://x.com/Big_Tibardoe">
           <Image
-            src="assets/images/github.svg"
-            alt="Gmail"
-            width={30}
-            height={30}
-          />
-        </Link>
-        <Link href="https://mail.google.com/mail/u/0/#inbox?compose=new">
-          <Image
-            src="assets/images/twitter.svg"
-            alt="Gmail"
+            src="assets/images/footerImg/twitter.svg"
+            alt="Twitter"
             width={30}
             height={30}
           />

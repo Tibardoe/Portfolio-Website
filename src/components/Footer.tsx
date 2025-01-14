@@ -42,7 +42,7 @@ export default function Footer() {
       </div>
 
       <p className="font-bold">
-        &copy; Benjamin Tibardoe
+        &copy; {currentYear} Benjamin Tibardoe
         <span className="font-normal"> All Rights Reserved</span>
       </p>
     </footer>

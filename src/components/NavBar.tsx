@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-export default function NavBar() {
+type navBarProp = {
+  isVisible: boolean;
+};
+
+export default function NavBar({ isVisible }: navBarProp) {
   return (
     <>
       <nav className="text-white font-bold mt-28 p-4 align-middle hidden md:flex">
@@ -25,7 +29,11 @@ export default function NavBar() {
 
       {/* On smaller screens */}
 
-      <nav className="text-white font-bold p-4 border-t-2 border-t-white flex-wrap justify-center flex md:hidden">
+      <nav
+        className={`text-white relative font-bold p-4 border-t-2 border-t-white justify-center transition duration-300 ease-in ${
+          isVisible ? "opacity-100" : "opacity-0"
+        } flex md:hidden`}
+      >
         <div className="p-2 space-y-5 flex flex-col items-center">
           <Link className="hover:text-xl duration-300" href="/about">
             About Me

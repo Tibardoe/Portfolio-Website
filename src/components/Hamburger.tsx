@@ -1,14 +1,17 @@
 "use client";
 import { useState } from "react";
 
-type clickedd = {
-  isClicked: string;
+type onClick = {
+  isClicked: boolean;
+  onToggle: (value: boolean) => void;
 };
 
-export default function Hamburger() {
-  const [clicked, setClicked] = useState(false);
+export default function Hamburger({ isClicked, onToggle }: onClick) {
+  const [clicked, setClicked] = useState(isClicked);
   function handleCLick() {
-    setClicked((prevState) => !prevState);
+    const newState = !clicked;
+    setClicked(newState);
+    onToggle(newState);
   }
   return (
     <button

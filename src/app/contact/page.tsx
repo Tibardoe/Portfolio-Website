@@ -22,6 +22,30 @@ export default function Contact() {
     }));
   }
 
+  async function handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(contact),
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setContact({ name: "", email: "", phone: "", message: "" });
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
+    }
+  }
+
   return (
     <>
       <section className="flex-col items-center w-full p-5 space-y-10 hidden lg:flex">
@@ -36,7 +60,7 @@ export default function Contact() {
 
         <form
           className="w-1/2 flex flex-col space-y-10 items-center"
-          action="/submit"
+          onSubmit={handleSubmit}
           method="POST"
         >
           <Input
@@ -58,7 +82,7 @@ export default function Contact() {
             onChange={handleContact}
           />
           <textarea
-            className="bg-transparent outline-none border-l-4 border-b-4 border-black p-3 text-lg font-bold w-full"
+            className="bg-transparent outline-none font-normal border-l-4 border-b-4 border-black p-3 text-lg placeholder:font-bold w-full"
             rows={10}
             name="message"
             placeholder="YOUR MESSAGE*"
@@ -111,7 +135,7 @@ export default function Contact() {
             onChange={handleContact}
           />
           <textarea
-            className="bg-transparent outline-none border-l-4 border-b-4 border-black p-3 text-lg font-bold w-full"
+            className="bg-transparent font-normal outline-none border-l-4 border-b-4 border-black p-3 text-lg placeholder:font-bold w-full"
             rows={10}
             name="message"
             placeholder="YOUR MESSAGE*"
@@ -142,7 +166,7 @@ export default function Contact() {
 
         <form
           className="w-4/5 flex flex-col space-y-10 items-center"
-          action="/submit"
+          action="/"
           method="POST"
         >
           <Input
@@ -164,7 +188,7 @@ export default function Contact() {
             onChange={handleContact}
           />
           <textarea
-            className="bg-transparent outline-none border-l-4 border-b-4 border-black p-3 text-lg placeholder:font-bold w-full"
+            className="bg-transparent font-normal outline-none border-l-4 border-b-4 border-black p-3 text-lg placeholder:font-bold w-full"
             rows={10}
             name="message"
             placeholder="YOUR MESSAGE*"
@@ -174,7 +198,7 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="font-bold text-lg border-x-4 border-black w-1/5 px-2 py-4 hover:scale-105 hover:text-xl transition duration-200"
+            className="font-bold text-lg border-x-4 border-black w-2/5 px-2 py-4 hover:scale-105 hover:text-xl transition duration-200"
           >
             SUBMIT
           </button>

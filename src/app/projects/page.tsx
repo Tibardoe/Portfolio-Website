@@ -6,7 +6,10 @@ import Link from "next/link";
 export default function Project() {
   return (
     <>
-      <section className="flex-col space-y-10 items-center w-full mb-28 hidden xl:flex">
+      <section
+        id="projects"
+        className="flex-col space-y-10 items-center w-full mb-28 hidden xl:flex"
+      >
         <HeaderBox>
           <h1>PROJECTS</h1>
         </HeaderBox>
@@ -48,7 +51,10 @@ export default function Project() {
 
       {/* On medium screens */}
 
-      <section className="flex-col space-y-10 items-center w-full mb-28 hidden lg:flex xl:hidden">
+      <section
+        id="projects"
+        className="flex-col space-y-10 items-center w-full mb-28 hidden lg:flex xl:hidden"
+      >
         <HeaderBox>
           <h1>PROJECTS</h1>
         </HeaderBox>

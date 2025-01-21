@@ -4,7 +4,10 @@ import Image from "next/image";
 export default function Skills() {
   return (
     <>
-      <section className="flex-col space-y-14 w-3/4 m-auto items-center hidden lg:flex">
+      <section
+        id="skills"
+        className="flex-col space-y-14 w-3/4 m-auto items-center hidden lg:flex"
+      >
         <HeaderBox>
           <h1>SKILLS</h1>
         </HeaderBox>

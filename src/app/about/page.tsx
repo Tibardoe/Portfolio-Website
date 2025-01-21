@@ -5,7 +5,10 @@ import Image from "next/image";
 export default function About() {
   return (
     <>
-      <section className="flex-col items-center p-5 w-full space-y-16 hidden lg:flex">
+      <section
+        id="about"
+        className="flex-col items-center p-5 w-full space-y-16 hidden lg:flex"
+      >
         <HeaderBox>
           <h1>ABOUT ME</h1>
         </HeaderBox>

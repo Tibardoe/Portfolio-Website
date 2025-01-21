@@ -48,7 +48,10 @@ export default function Contact() {
 
   return (
     <>
-      <section className="flex-col items-center w-full p-5 space-y-10 hidden lg:flex">
+      <section
+        id="contact"
+        className="flex-col items-center w-full p-5 space-y-10 hidden lg:flex"
+      >
         <HeaderBox>
           <h1> CONTACT ME</h1>
         </HeaderBox>
@@ -101,7 +104,10 @@ export default function Contact() {
 
       {/* On medium screens */}
 
-      <section className="flex-col items-center w-full p-5 space-y-10 hidden md:flex lg:hidden">
+      <section
+        id="contact"
+        className="flex-col items-center w-full p-5 space-y-10 hidden md:flex lg:hidden"
+      >
         <HeaderBox>
           <h1> CONTACT ME</h1>
         </HeaderBox>

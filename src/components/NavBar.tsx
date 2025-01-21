@@ -9,18 +9,18 @@ export default function NavBar({ isVisible }: navBarProp) {
     <>
       <nav className="text-white font-bold mt-28 p-4 align-middle hidden md:flex">
         <div className="p-2 gap-5 flex flex-wrap items-center">
-          <Link className="hover:text-xl duration-300" href="/about">
+          <Link className="hover:text-xl duration-300" href="#about">
             About Me
           </Link>
-          <Link className="hover:text-xl duration-300" href="/projects">
+          <Link className="hover:text-xl duration-300" href="#projects">
             Projects
           </Link>
-          <Link className="hover:text-xl duration-300" href="/skills">
+          <Link className="hover:text-xl duration-300" href="#skills">
             Skills
           </Link>
           <Link
             className="bg-white p-2 rounded-full text-black hover:text-white  hover:bg-transparent hover:border transition duration-300"
-            href="/contact"
+            href="#contact"
           >
             Contact Me
           </Link>
@@ -35,18 +35,18 @@ export default function NavBar({ isVisible }: navBarProp) {
         } flex md:hidden`}
       >
         <div className="p-2 space-y-5 flex flex-col items-center">
-          <Link className="hover:text-xl duration-300" href="/about">
+          <Link className="hover:text-xl duration-300" href="#about">
             About Me
           </Link>
-          <Link className="hover:text-xl duration-300" href="/projects">
+          <Link className="hover:text-xl duration-300" href="#projects">
             Projects
           </Link>
-          <Link className="hover:text-xl duration-300" href="/skills">
+          <Link className="hover:text-xl duration-300" href="#skills">
             Skills
           </Link>
           <Link
             className="bg-white p-2 rounded-full text-black hover:text-white  hover:bg-transparent hover:border transition duration-300"
-            href="/contact"
+            href="#contact"
           >
             Contact Me
           </Link>

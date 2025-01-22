@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="h-1/5 bg-black w-full flex flex-col align-middle justify-center text-white items-center p-5 space-y-10">
+    <footer className="h-1/5 bg-black w-full flex flex-col justify-center text-white items-center p-5 space-y-10">
       <div className="bg-transparent flex gap-5">
         <Link href="https://mail.google.com/mail/u/0/#inbox?compose=new">
           <Image

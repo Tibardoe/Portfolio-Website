@@ -1,24 +1,35 @@
+"use client";
+
 import HeaderBox from "@/components/HeaderBox";
 import ProjectList from "@/utils/ProjectList";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import ProjectId from "./[projectId]/page";
 
 export default function Project() {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    setClicked((prevState) => !prevState);
+  };
   return (
     <>
       <section
         id="projects"
-        className="flex-col space-y-10 items-center w-full mb-28 hidden xl:flex"
+        className="relative flex-col p-5 space-y-10 mb-16 items-center h-screen w-full hidden xl:flex"
       >
         <HeaderBox>
           <h1>PROJECTS</h1>
         </HeaderBox>
-        <ul className="w-3/5 flex justify-between gap-10">
+        <ul className="grid grid-cols-2 justify-between w-3/4 p-10 gap-10 overflow-x-auto shadow-lg">
           {ProjectList.map((project) => (
             <Link
-              href="/"
+              onClick={handleClick}
+              href="#"
               key={project.id}
-              className="hover:scale-110 transition duration-300 w-3/5"
+              className="hover:scale-110 transition duration-300"
             >
               <li className="bg-slate-700 text-white rounded-2xl h-full">
                 <Image
@@ -47,6 +58,8 @@ export default function Project() {
             </Link>
           ))}
         </ul>
+
+        {clicked && <ProjectId />}
       </section>
 
       {/* On medium screens */}
@@ -61,7 +74,8 @@ export default function Project() {
         <ul className="w-4/5 flex flex-col items-center gap-10">
           {ProjectList.map((project) => (
             <Link
-              href="/"
+              href="#"
+              onClick={handleClick}
               key={project.id}
               className="hover:scale-110 transition duration-300 w-4/5"
             >
@@ -94,6 +108,7 @@ export default function Project() {
             </Link>
           ))}
         </ul>
+        {clicked && <ProjectId />}
       </section>
 
       {/* on smaller screens */}
@@ -105,7 +120,8 @@ export default function Project() {
         <ul className="w-4/5 flex flex-col items-center gap-10">
           {ProjectList.map((project) => (
             <Link
-              href="/"
+              href="#"
+              onClick={handleClick}
               key={project.id}
               className="hover:scale-110 transition duration-300 w-4/5"
             >
@@ -138,6 +154,7 @@ export default function Project() {
             </Link>
           ))}
         </ul>
+        {clicked && <ProjectId />}
       </section>
     </>
   );

@@ -4,16 +4,16 @@ import HeaderBox from "@/components/HeaderBox";
 import ProjectList from "@/utils/ProjectList";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import ProjectId from "./[projectId]/page";
+// import { useState } from "react";
+// import ProjectId from "./[projectId]/page";
 
 export default function Project() {
-  const [clicked, setClicked] = useState(false);
+  // const [clicked, setClicked] = useState(false);
 
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    setClicked((prevState) => !prevState);
-  };
+  // const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  //   event.preventDefault();
+  //   setClicked((prevState) => !prevState);
+  // };
   return (
     <>
       <section
@@ -26,7 +26,7 @@ export default function Project() {
         <ul className="grid grid-cols-2 justify-between w-3/4 p-10 gap-10 overflow-x-auto shadow-lg">
           {ProjectList.map((project) => (
             <Link
-              onClick={handleClick}
+              // onClick={handleClick}
               href="#"
               key={project.id}
               className="hover:scale-110 transition duration-300"
@@ -75,7 +75,7 @@ export default function Project() {
           {ProjectList.map((project) => (
             <Link
               href="#"
-              onClick={handleClick}
+              // onClick={handleClick}
               key={project.id}
               className="hover:scale-110 transition duration-300 w-4/5"
             >
@@ -121,7 +121,7 @@ export default function Project() {
           {ProjectList.map((project) => (
             <Link
               href="#"
-              onClick={handleClick}
+              // onClick={handleClick}
               key={project.id}
               className="hover:scale-110 transition duration-300 w-4/5"
             >

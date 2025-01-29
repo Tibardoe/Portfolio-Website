@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default [
+const ProjectList = [
   {
     id: 1,
     title: "Blogging Platform",
@@ -133,3 +133,5 @@ export default [
     ],
   },
 ];
+
+export default ProjectList;

@@ -59,7 +59,7 @@ export default function Project() {
           ))}
         </ul>
 
-        {clicked && <ProjectId />}
+        {/* {clicked && <ProjectId />} */}
       </section>
 
       {/* On medium screens */}
@@ -108,7 +108,7 @@ export default function Project() {
             </Link>
           ))}
         </ul>
-        {clicked && <ProjectId />}
+        {/* {clicked && <ProjectId />} */}
       </section>
 
       {/* on smaller screens */}
@@ -154,7 +154,7 @@ export default function Project() {
             </Link>
           ))}
         </ul>
-        {clicked && <ProjectId />}
+        {/* {clicked && <ProjectId />} */}
       </section>
     </>
   );

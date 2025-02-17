@@ -5,7 +5,7 @@ import ProjectList from "@/utils/ProjectList";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import ProjectId from "./[projectId]/page";
+import ProjectId from "../../PprojectId/page";
 
 export default function Project() {
   const [clicked, setClicked] = useState(false);

@@ -70,7 +70,7 @@ export default function ProjectId({ id, click }: ProjectIdProp) {
                 </div>
               </div>
             </div>
-          )
+          ),
       )}
     </div>
   );

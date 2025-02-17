@@ -2,12 +2,12 @@ import ProjectList from "@/utils/ProjectList";
 import Image from "next/image";
 import Link from "next/link";
 
-type IdProp = {
+type ProjectIdProp = {
   id: number;
   click: (state: boolean) => void;
 };
 
-export default function ProjectId({ id, click }: IdProp) {
+export default function ProjectId({ id, click }: ProjectIdProp) {
   return (
     <div className="fixed z-10 flex justify-center items-center top-0 left-0 w-full h-screen bg-black bg-opacity-30">
       <button onClick={() => click(false)} type="button">

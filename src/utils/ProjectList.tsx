@@ -57,7 +57,6 @@ const ProjectList = [
       "/assets/images/signup.png",
       "/assets/images/blogs.png",
       "/assets/images/blogs 2.png",
-      "/assets/images/blogs.png",
       "/assets/images/edit.png",
       "/assets/images/user page.png",
     ],
